@@ -1,0 +1,204 @@
+.goods-content{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.content_goods{
+    margin: 0% 5% 0% 5%;
+}
+.card {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    margin: 20px 15px 1px 0px;
+  }
+  
+  .card:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+  }
+  
+  .card__top {
+    flex: 0 0 220px; 
+    position: relative;
+    overflow: hidden;
+  }
+    .card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.2s;
+  }
+  .card__image:hover > img {
+    transform: scale(1.1);
+  }
+  .card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff0000;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 10px;
+  }
+  
+  .card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%; 
+  }
+  
+  .card__price::after {
+    content: "₽";
+    margin-left: 4px;
+    position: relative;
+  }
+  
+  .card__price--discount {
+    font-weight: 700;
+    font-size: 19px;
+    color: #414141;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    font-family: sans-serif;
+  }
+  
+  .card__price--discount::before {
+    content: "Со скидкой";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+  
+  .card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #606060;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+  }
+  
+  .card__price--common::before {
+    content: "Обычная";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+  
+  .card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #414141;
+  }
+  
+  .card__title:hover {
+    color: #ff6633;
+  }
+ 
+  .card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto; 
+  }
+  
+  .card__add:hover {
+    border: 1px solid #f02424;
+    background-color: #f02424;
+    color: #fff;
+  }
+  .carde{
+    display: inline-block;
+  }
+  .container.flex-test-wrap {
+  margin: 0px 95px 1px 95px;
+  }
+  .php{
+    width:100 ;
+    height: 214;
+  }
+.in_catal{
+  font-family: sans-serif;
+  text-align: center;
+
+}
+.gc{
+  min-width: 480px;
+  max-width: 1440px;
+}
+@media screen and (max-width: 1079px) {
+  .gc{
+    padding-left: 10%;
+  }
+}
+@media screen and (max-width: 1035px) {
+  .gc{
+    padding-left: 7%;
+  }
+}
+@media screen and (max-width: 984px) {
+  .gc{
+    padding-left: 5%;
+  }
+}
+@media screen and (max-width: 934px) {
+  .gc{
+    padding-left: 3%;
+    min-width: 826px;
+  }
+}
+@media screen and (max-width: 901px) {
+  .gc{
+    padding-left: 1%;
+  }
+}
+@media screen and (max-width: 853px) {
+  .gc{
+    padding-left: 2%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .gc{
+    padding-left: 0%;
+  }
+}
+@media screen and (max-width: 506px) {
+  .gc{
+    padding-left: 8%;
+  }
+}
