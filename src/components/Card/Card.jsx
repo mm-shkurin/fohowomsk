@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Card.css'
-import { useHistory, useParams } from 'react-router-dom';
-import { Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const CardDetails = () => {
-  const history = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -30,12 +28,12 @@ const CardDetails = () => {
         <div className='card_content'>
           <div className='card_h11'>{<span>{product.name}</span>}</div>
           <div className='image_card'>
-          {product.images.map((image) => (
-          <img src={`http://fohowomsk.ru${image.img}`} alt={image.name} />
-          ))}
+            {product.images.map((image, index) => (
+              <img key={index} src={`http://fohowomsk.ru${image.img}`} alt={image.name} />
+            ))}
           </div>
           <div className='txt-card'>
-          <p>{product.description}</p>
+            <p>{product.description}</p>
           </div>
         </div>
       )}

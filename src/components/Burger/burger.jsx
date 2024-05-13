@@ -9,7 +9,6 @@ const YourMenuComponent = () => {
     setBurgerMenuOpen(!isBurgerMenuOpen);
   };
 
-
   return (
     <nav>
       <button className={`burger-button ${isBurgerMenuOpen ? 'open' : ''}`} onClick={toggleBurgerMenu}>
@@ -19,7 +18,7 @@ const YourMenuComponent = () => {
       </button>
       <ul className={`topmenu ${isBurgerMenuOpen ? 'burger-open' : ''}`}>
         <li><a href="/home" className={`active ${isProductSubMenuOpen ? 'arrow-up' : 'arrow-down'}`} onClick={() => setProductSubMenuOpen(!isProductSubMenuOpen)}>О нас</a>
-        <ul className={`submenu ${isProductSubMenuOpen ? 'submenu-open' : ''}`}>
+          <ul className={`submenu ${isProductSubMenuOpen ? 'submenu-open' : ''}`}>
             <li><a href="/manag" className="submenu-link">Руководство</a></li>
           </ul>
         </li>
@@ -30,7 +29,7 @@ const YourMenuComponent = () => {
           </a>
           <ul className={`submenu ${isProductSubMenuOpen ? 'submenu-open' : ''}`}>
             <li><a href="/burg" className={`active ${isProductSubMenuOpen ? 'arrow-up' : 'arrow-down'}`} onClick={() => setProductSubMenuOpen(!isProductSubMenuOpen)}>Оздоровительное питание</a>
-            <ul className={`submenu ${isProductSubMenuOpen ? 'submenu-open' : ''}`}>
+              <ul className={`submenu ${isProductSubMenuOpen ? 'submenu-open' : ''}`}>
                 <li><a href="/regulation">Регуляция</a></li>
                 <li><a href="/cleaning">Очистка</a></li>
                 <li><a href="/recovery">Восстановление</a></li>
@@ -45,8 +44,8 @@ const YourMenuComponent = () => {
         <li><a href="">Результаты</a></li>
         <li><a href="">Новости</a></li>
         <li><a href="/contact">Контакты</a></li>
-      </ul >
-    </nav >
+      </ul>
+    </nav>
   );
 };
 

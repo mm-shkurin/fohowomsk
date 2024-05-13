@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import './Contact.css'
 function MapWithMarker() {
     const mapRef = useRef(null);
