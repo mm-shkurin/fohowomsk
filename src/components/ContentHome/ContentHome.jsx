@@ -6,6 +6,7 @@ import React from "react";
 import Slider from "./Slider";
 
 function ContentHome() {
+    // eslint-disable-next-line
     const images = [
         "image 12 (2).png",
         "image 3.png",

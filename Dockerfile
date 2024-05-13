@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /usr/src/app
 
 # Копируем файлы проекта
-COPY package*.json ./
+v  
 
 # Устанавливаем зависимости
 RUN npm install

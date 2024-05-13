@@ -1,5 +1,4 @@
 import './ContentTwo.css'
-import photo_first from './../../img/image 3.png';
 import photo_second from './../../img/image 9.png';
 
 function ContentTwo() {
