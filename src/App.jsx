@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Header from "./components/Header/Header";
 import Cleaning from "./components/Goods/Cleaning";
 import ContentHome from "./components/ContentHome/ContentHome";
@@ -9,7 +11,6 @@ import Equipment from "./components/Goods/Equipment";
 import Cosmetology from "./components/Goods/Cosmetology";
 import CardDetails from "./components/Card/Card";
 import Management from "./components/Managament/Managament";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Company from "./components/Company/Company";
 import ContactMain from "./components/Contact/Contact-main";
 
@@ -17,23 +18,23 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header></Header>
-        <Routes><Route path='/home' element={<ContentHome/>} /></Routes>
-        <div className="changeable_content">
-          <Routes>
-            <Route path='/product/:id' element={<CardDetails/>}/>
-            <Route path='/cleaning' element={<Cleaning/>} />
-            <Route path='/hygiene_care' element={<HygieneCare/>} />
-            <Route path='/recovery' element={<Recovery/>} />
-            <Route path='/texstil' element={<Texstil/>} />
-            <Route path='/regulation' element={<Regulation/>} />
-            <Route path='/equipment' element={<Equipment/>} />
-            <Route path='/cosmetology' element={<Cosmetology/>} />
-            <Route path='/management' element={<Management/>} />
-            <Route path='/company' element={<Company/>} />
-            <Route path="/contact" element={<ContactMain/>}/>
-          </Routes>
-        </div>
+        <Header />
+        <Routes>
+          {/* Redirect from root to /home */}
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path='/home' element={<ContentHome />} />
+          <Route path='/product/:id' element={<CardDetails />} />
+          <Route path='/cleaning' element={<Cleaning />} />
+          <Route path='/hygiene_care' element={<HygieneCare />} />
+          <Route path='/recovery' element={<Recovery />} />
+          <Route path='/texstil' element={<Texstil />} />
+          <Route path='/regulation' element={<Regulation />} />
+          <Route path='/equipment' element={<Equipment />} />
+          <Route path='/cosmetology' element={<Cosmetology />} />
+          <Route path='/manag' element={<Management />} />
+          <Route path='/company' element={<Company />} />
+          <Route path='/contact' element={<ContactMain />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

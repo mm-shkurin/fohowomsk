@@ -4,15 +4,14 @@ FROM node:14
 # Устанавливаем рабочую директорию
 WORKDIR /usr/src/app
 
-# Копируем файлы проекта
-v  
+# Копируем package.json и package-lock.json
+COPY package*.json ./
 
 # Устанавливаем зависимости
 RUN npm install
 
 # Копируем все остальные файлы проекта
 COPY . .
- 
 
 # Открываем порт, на котором работает ваше приложение
 EXPOSE 3000
