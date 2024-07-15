@@ -10,8 +10,21 @@ services:
       NODE_VERSION: "16"  # Переменная окружения для версии Node.js
     
   nginx:
-    build: ./nginx 
+    image: nginx
     ports:
       - "80:80"  # Открываем порт, на котором работает приложение
       - "443:443"  # Открываем порт, на котором работает приложение
     env_file: ".env"
+    volumes:
+      - ./nginx/conf:/etc/nginx
+      - ./nginx/www:/var/www
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./nginx/conf:/etc/letsencrypt
+      - ./nginx/www:/var/www/certbot
+    entrypoint: "certbot certonly --webroot -w /var/www/certbot -d $DOMAIN_URL --email $DOMAIN_EMAIL --agree-tos"
+    env_file: ".env"
+    #restart: on-failure
