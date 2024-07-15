@@ -25,3 +25,6 @@ services:
     volumes:
       - ./nginx/conf:/etc/letsencrypt
       - ./nginx/www:/var/www/certbot
+    entrypoint: "certbot certonly --standalone --email $DOMAIN_EMAIL -d $DOMAIN_URL --cert-name=certfolder --key-type rsa --agree-tos"
+    env_file: ".env"
+    #restart: on-failure
