@@ -9,7 +9,7 @@ const CardDetails = () => {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch(`https://fohowomsk.ru/api/products/${id}/`);
+        const response = await fetch(`https://fohowomsk.space/api/products/${id}/`);
         const data = await response.json();
         console.log('Product data:', data);
         setProduct(data); // Сохраняем данные товара в состоянии
@@ -29,7 +29,7 @@ const CardDetails = () => {
           <div className='card_h11'>{<span>{product.name}</span>}</div>
           <div className='image_card'>
             {product.images.map((image, index) => (
-              <img key={index} src={`http://fohowomsk.ru${image.img}`} alt={image.name} />
+              <img key={index} src={`http://fohowomsk.space${image.img}`} alt={image.name} />
             ))}
           </div>
           <div className='txt-card'>
